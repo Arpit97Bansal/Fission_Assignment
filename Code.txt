@@ -1,0 +1,31 @@
+# Fission_Assignment
+
+a = []
+i=0
+num = 1000001
+while(i<num+1):
+    a.append(0)
+    i=i+1
+#print(a)
+i=2
+while(i<num):
+    a[i]=i
+    j=i*2
+    #print(i)
+    while(j<num):
+        if(a[j]==0):
+            a[j]=i
+        j=j+i
+        #print(j)
+    i=i+1
+    while((i<num)&(a[i]!=0)):
+        i=i+1
+
+test  = int(raw_input())
+i=0
+while(i<test):
+    n = int(raw_input())
+    first = n - a[n]
+    second = a[n]
+    print first,second
+    i=i+1
